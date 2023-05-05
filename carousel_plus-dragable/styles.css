@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Nanum+Gothic&family=Noto+Serif+Khojki&family=Nunito:wght@300&family=Playfair+Display&family=Poppins&family=Quicksand&family=Raleway&family=Raleway+Dots&family=Sono&family=Tilt+Warp&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #343f4f;
+    padding: 0px 35px;
+}
+.wrapper{
+    max-width: 1200px;
+    position: relative;
+}
+
+.wrapper .carousel{
+    white-space: nowrap;
+    font-size: 0;
+    cursor: pointer;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.wrapper i {
+    background: #fff;
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 47px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    
+}
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img {
+        pointer-events: none;
+}
+.carousel img {
+    height: 340px;
+    object-fit: cover;
+    width: calc(100%/3);
+    margin-left: 14px;
+}
+
+
+
+.carousel img:first-child{
+    margin-left: 0;
+}
+
+@media screen and (max-width:900px){
+    .carousel img {
+        width: calc(100%/2);
+    }
+
+}
+@media screen and (max-width:550px){
+    .carousel img {
+        width: 100%;
+    }
+
+}
